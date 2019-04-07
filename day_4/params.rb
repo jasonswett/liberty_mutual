@@ -39,3 +39,12 @@ george_bushes = President.where(
 )
 
 puts george_bushes
+
+separator
+
+george_bushes = President.where(
+  first_name: 'George',
+  last_name: 'Bush'
+)
+
+puts george_bushes
