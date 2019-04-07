@@ -1,5 +1,11 @@
 class President < ActiveRecord::Base
+  has_many :cabinet_members
+
   def to_s
-    "#{number} #{first_name} #{last_name}"
+    "#{number} #{name}"
+  end
+
+  def name
+    "#{first_name} #{last_name}"
   end
 end

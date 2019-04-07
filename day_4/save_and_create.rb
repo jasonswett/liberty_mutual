@@ -1,7 +1,6 @@
 require_relative './db_config'
-require_relative './president'
 
-unlogged { President.destroy_all }
+clean_database
 
 p = President.new(
   number: 1,
@@ -14,7 +13,7 @@ puts p.id
 
 separator
 
-unlogged { President.destroy_all }
+clean_database
 
 p = President.create(
   number: 1,

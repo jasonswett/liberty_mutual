@@ -1,5 +1,7 @@
 require 'active_record'
 require 'pg'
+require_relative './president'
+require_relative './cabinet_member'
 
 ActiveRecord::Base.establish_connection(
   adapter: 'postgresql',
@@ -26,4 +28,11 @@ def separator
   puts
   puts '-' * 30
   puts
+end
+
+def clean_database
+  unlogged do
+    CabinetMember.destroy_all
+    President.destroy_all
+  end
 end
