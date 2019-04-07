@@ -1,9 +1,8 @@
 require_relative './db_config'
-require_relative './president'
+
+clean_database
 
 unlogged do
-  President.destroy_all
-
   President.create([
     {
       number: 1,

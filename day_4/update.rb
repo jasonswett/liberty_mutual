@@ -1,5 +1,4 @@
 require_relative './db_config'
-require_relative './president'
 
 george = President.new(
   number: 1,
@@ -7,8 +6,9 @@ george = President.new(
   last_name: 'Washington'
 )
 
+clean_database
+
 unlogged do
-  President.destroy_all
   george.save
 
   President.create(
