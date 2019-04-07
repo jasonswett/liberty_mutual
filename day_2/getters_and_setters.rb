@@ -1,30 +1,30 @@
-class PresidentA
-  def initialize(first_name)
-    @first_name = first_name
+class StateA
+  def initialize(name)
+    @name = name
   end
 end
 
-class PresidentB
-  attr_reader :first_name
+class StateB
+  attr_reader :name
 
-  def initialize(first_name)
-    @first_name = first_name
+  def initialize(name)
+    @name = name
   end
 end
 
-class PresidentC
-  attr_reader :first_name
-  attr_writer :first_name
+class StateC
+  attr_reader :name
+  attr_writer :name
 
-  def initialize(first_name)
-    @first_name = first_name
+  def initialize(name)
+    @name = name
   end
 end
 
-class PresidentD
-  attr_accessor :first_name
+class StateD
+  attr_accessor :name
 
-  def initialize(first_name)
-    @first_name = first_name
+  def initialize(name)
+    @name = name
   end
 end

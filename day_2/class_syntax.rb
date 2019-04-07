@@ -9,5 +9,9 @@ class President
   end
 end
 
-george_washington = President.new(first_name: 'George', last_name: 'Washington')
+george_washington = President.new(
+  first_name: 'George',
+  last_name: 'Washington'
+)
+
 puts george_washington.name
