@@ -1,9 +1,7 @@
 require_relative './db_config'
+require_relative './president'
 
-class President < ActiveRecord::Base
-end
-
-President.destroy_all
+unlogged { President.destroy_all }
 
 p = President.new(
   number: 1,
@@ -14,7 +12,9 @@ p = President.new(
 p.save
 puts p.id
 
-President.destroy_all
+separator
+
+unlogged { President.destroy_all }
 
 p = President.create(
   number: 1,
