@@ -22,21 +22,6 @@ unlogged do
   ])
 end
 
+puts President.order('number asc')
 separator
-
-puts 'President.all:'
-puts President.all
-
-separator
-puts 'President.first:'
-puts President.first
-
-separator
-puts 'President.find_by:'
-john_adams = President.find_by(number: 2)
-puts john_adams
-
-separator
-puts 'President.where:'
-later_presidents = President.where('number > ?', 1)
-puts later_presidents
+puts President.order('number desc')

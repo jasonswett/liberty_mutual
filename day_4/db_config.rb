@@ -16,8 +16,6 @@ def query_logging(option)
   ActiveRecord::Base.logger = logger
 end
 
-query_logging :on
-
 def unlogged(&block)
   query_logging :off
   block.call
@@ -36,3 +34,5 @@ def clean_database
     President.destroy_all
   end
 end
+
+query_logging :on
