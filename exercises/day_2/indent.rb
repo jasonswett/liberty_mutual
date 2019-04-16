@@ -13,7 +13,8 @@ class Formatter
 end
 
 def indented(indent_level)
-  yield(Formatter.new(indent_level))
+  formatter = Formatter.new(indent_level)
+  yield(formatter)
 end
 
 formatter = Formatter.new
