@@ -20,7 +20,7 @@ class President
   end
 end
 
-RSpec.describe 'upcase_all' do
+RSpec.describe President do
   describe '#name' do
     it 'returns the full name' do
       president = President.new(
