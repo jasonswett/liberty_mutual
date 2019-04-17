@@ -17,5 +17,5 @@ RSpec.describe Document do
       expect(document.word_counts['apples']).to eq(2)
       expect(document.word_counts['oranges']).to eq(1)
     end
-	end
+  end
 end
