@@ -15,6 +15,7 @@ RSpec.describe Document do
     it 'returns word counts' do
       document = Document.new('apples apples oranges')
       expect(document.word_counts['apples']).to eq(2)
+      expect(document.word_counts['oranges']).to eq(1)
     end
 	end
 end
