@@ -9,8 +9,6 @@ end
 RSpec.describe Document do
   describe '#words' do
     it 'returns words as an array' do
-      document = Document.new('Apples apples! oranges.')
-      expect(document.words).to eq(['apples', 'apples', 'oranges'])
     end
   end
 end
